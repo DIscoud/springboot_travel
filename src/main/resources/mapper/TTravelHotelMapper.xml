@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lemon.mapper.TTravelHotelMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lemon.entity.TTravelHotel">
+        <id column="htl_id" property="htlId" />
+        <result column="htl_name" property="htlName" />
+        <result column="htl_img" property="htlImg" />
+        <result column="htl_address" property="htlAddress" />
+        <result column="snic_name" property="snicName" />
+        <result column="htl_star" property="htlStar" />
+        <result column="htl_phone" property="htlPhone" />
+        <result column="rut_time" property="rutTime" />
+        <result column="htl_remark" property="htlRemark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        htl_id, htl_name, htl_img, htl_address, snic_name, htl_star, htl_phone, rut_time, htl_remark
+    </sql>
+
+</mapper>

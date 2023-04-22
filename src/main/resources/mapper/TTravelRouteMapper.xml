@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lemon.mapper.TTravelRouteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lemon.entity.TTravelRoute">
+        <id column="rut_id" property="rutId" />
+        <result column="rut_start" property="rutStart" />
+        <result column="rut_end" property="rutEnd" />
+        <result column="rut_img" property="rutImg" />
+        <result column="rut_mid" property="rutMid" />
+        <result column="rut_price" property="rutPrice" />
+        <result column="rut_type" property="rutType" />
+        <result column="rut_time" property="rutTime" />
+        <result column="rut_name" property="rutName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        rut_id, rut_start, rut_end, rut_img, rut_mid, rut_price, rut_type, rut_time, rut_name
+    </sql>
+
+</mapper>

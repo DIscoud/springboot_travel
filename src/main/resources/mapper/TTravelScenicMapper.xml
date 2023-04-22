@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lemon.mapper.TTravelScenicMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lemon.entity.TTravelScenic">
+        <id column="snic_id" property="snicId" />
+        <result column="snic_name" property="snicName" />
+        <result column="snic_img" property="snicImg" />
+        <result column="snic_rank" property="snicRank" />
+        <result column="snic_price" property="snicPrice" />
+        <result column="snic_address" property="snicAddress" />
+        <result column="snic_remark" property="snicRemark" />
+        <result column="snic_time" property="snicTime" />
+        <result column="rut_time" property="rutTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        snic_id, snic_name, snic_img, snic_rank, snic_price, snic_address, snic_remark, snic_time, rut_time
+    </sql>
+
+</mapper>

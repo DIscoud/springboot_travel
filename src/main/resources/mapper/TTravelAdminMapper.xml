@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lemon.mapper.TTravelAdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lemon.entity.TTravelAdmin">
+        <id column="adm_aid" property="admAid" />
+        <result column="adm_username" property="admUsername" />
+        <result column="adm_password" property="admPassword" />
+        <result column="adm_ID" property="admId" />
+        <result column="adm_sex" property="admSex" />
+        <result column="adm_img" property="admImg" />
+        <result column="adm_status" property="admStatus" />
+        <result column="adm_phone" property="admPhone" />
+        <result column="adm_name" property="admName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        adm_aid, adm_username, adm_password, adm_ID, adm_sex, adm_img, adm_status, adm_phone, adm_name
+    </sql>
+
+</mapper>
