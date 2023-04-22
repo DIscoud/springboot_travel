@@ -54,6 +54,9 @@ public class TTravelAdmin implements Serializable {
 
     @ApiModelProperty(value = "管理员名称")
     private String admName;
+    
+    @ApiModelProperty(value = "角色")
+    private int state;
 
 
 }

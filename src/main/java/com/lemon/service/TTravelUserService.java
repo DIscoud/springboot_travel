@@ -15,4 +15,5 @@ import java.util.List;
  */
 public interface TTravelUserService extends IService<TTravelUser> {
     TTravelUser login(String username, String password);
+    int register(String username, String password, String useracc);
 }

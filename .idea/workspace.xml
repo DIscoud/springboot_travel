@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2fd5a22-f8cb-4fa6-a1ba-f1dedc320780" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b2fd5a22-f8cb-4fa6-a1ba-f1dedc320780" name="Default Changelist" comment="2023.4.22.19:44">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/controller/TTravelUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/controller/TTravelUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/controller/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/entity/TTravelAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/entity/TTravelAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/entity/TTravelUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/entity/TTravelUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/mapper/TTravelAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/mapper/TTravelAdminMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/mapper/TTravelUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/mapper/TTravelUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/service/TTravelAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/service/TTravelAdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/service/TTravelUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/service/TTravelUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/service/impl/TTravelAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/service/impl/TTravelAdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lemon/service/impl/TTravelUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lemon/service/impl/TTravelUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TTravelAdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TTravelAdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TTravelUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TTravelUserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,12 +185,35 @@
       <workItem from="1682088382026" duration="185000" />
       <workItem from="1682088651035" duration="613000" />
       <workItem from="1682091590983" duration="4647000" />
-      <workItem from="1682128916979" duration="19136000" />
+      <workItem from="1682128916979" duration="22363000" />
     </task>
+    <task id="LOCAL-00001" summary="2023.4.22.19:44">
+      <created>1682163925196</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682163925196</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2023.4.22.19:44" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023.4.22.19:44" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

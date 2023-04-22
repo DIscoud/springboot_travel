@@ -19,5 +19,7 @@
     <sql id="Base_Column_List">
         adm_aid, adm_username, adm_password, adm_ID, adm_sex, adm_img, adm_status, adm_phone, adm_name
     </sql>
-
+    <select id="login" resultType="com.lemon.entity.TTravelAdmin">
+        select * from T_TRAVEL_ADMIN where adm_username = #{username} and  adm_password = #{pwd}
+    </select>
 </mapper>

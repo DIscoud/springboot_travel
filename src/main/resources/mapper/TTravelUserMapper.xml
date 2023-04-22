@@ -24,4 +24,7 @@
     <select id="login" resultType="com.lemon.entity.TTravelUser">
         select * from T_TRAVEL_USER where user_username = #{username} and user_password = #{userpwd}
     </select>
+    <select id="register" parameterType="int">
+        insert into T_TRAVEL_USER(user_username,user_password,user_name,stete) value(#{username},#{userpwd},#{name},1)
+    </select>
 </mapper>

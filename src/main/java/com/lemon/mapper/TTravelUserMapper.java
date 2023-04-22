@@ -17,4 +17,6 @@ import org.apache.ibatis.annotations.Param;
 public interface TTravelUserMapper extends BaseMapper<TTravelUser> {
 
     TTravelUser login(@Param("username") String username,@Param("userpwd") String password);
+
+    int register(@Param("username")String useracc,@Param("userpwd") String password,@Param("name") String useracc1);
 }

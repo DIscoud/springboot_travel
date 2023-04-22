@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-02-11
  */
 public interface TTravelAdminService extends IService<TTravelAdmin> {
-
+    TTravelAdmin login(String username, String md5DigestAsHex);
 }

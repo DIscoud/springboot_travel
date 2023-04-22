@@ -23,4 +23,9 @@ public class TTravelUserServiceImpl extends ServiceImpl<TTravelUserMapper, TTrav
     public TTravelUser login(String username, String password) {
         return tTravelUserMapper.login(username,password);
     }
+
+    @Override
+    public int register(String username, String password, String useracc) {
+        return tTravelUserMapper.register(useracc,password,useracc);
+    }
 }

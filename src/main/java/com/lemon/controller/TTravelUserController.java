@@ -9,8 +9,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lemon.common.QueryPageParam;
 import com.lemon.common.R;
 import com.lemon.common.Result;
+import com.lemon.entity.TTravelAdmin;
 import com.lemon.entity.TTravelUser;
 import com.lemon.entity.TTravelUser;
+import com.lemon.service.TTravelAdminService;
 import com.lemon.service.TTravelUserService;
 import com.lemon.service.TTravelUserService;
 import io.swagger.annotations.ApiImplicitParam;
@@ -40,7 +42,8 @@ import java.util.Map;
 public class TTravelUserController {
     @Autowired
     private TTravelUserService tTravelUserService;
-
+    @Autowired
+    private TTravelAdminService tTravelAdminService;
 
     /**
      * 查询全部用户信息
@@ -66,9 +69,29 @@ public class TTravelUserController {
     public String Login(String username,String password ){
         System.out.println(username);
         TTravelUser tTravelUser = tTravelUserService.login(username,DigestUtils.md5DigestAsHex(password.getBytes()));
-        String json = JSON.toJSONString(tTravelUser);
+        String json = null;
+        if (tTravelUser == null){
+            TTravelAdmin tTravelAdmin = tTravelAdminService.login(username,DigestUtils.md5DigestAsHex(password.getBytes()));
+            json = JSON.toJSONString(tTravelAdmin);
+        }else {
+            json = JSON.toJSONString(tTravelUser);
+        }
         return json;
     }
+
+    @ApiOperation(value = "register",notes = "登陆")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "useracc",value = "用户账号"),
+            @ApiImplicitParam(name = "password",value = "用户密码"),
+            @ApiImplicitParam(name = "username",value = "用户账号")
+    })
+    @RequestMapping(value = "/register",produces = { "text/html;charset=UTF-8;", "application/json;charset=UTF-8;" })
+    public int register(String username,String password,String useracc){
+        int num = tTravelUserService.register(username,DigestUtils.md5DigestAsHex(password.getBytes()),useracc);
+        return num;
+    }
+
+
     /**
      * 分页查询全部用户信息（可带条件 账号、性别、账号状态）
      * @param query

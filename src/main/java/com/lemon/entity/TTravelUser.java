@@ -54,6 +54,9 @@ public class TTravelUser implements Serializable {
     @ApiModelProperty(value = "用户昵称")
     private String userName;
 
+    @ApiModelProperty(value = "角色")
+    private int state;
+
     @TableField(fill = FieldFill.INSERT)//插入时自动填充字段
     @ApiModelProperty(value = "注册时间")
     private LocalDateTime rutTime;
