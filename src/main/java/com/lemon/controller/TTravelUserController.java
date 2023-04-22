@@ -1,6 +1,7 @@
 package com.lemon.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -12,13 +13,18 @@ import com.lemon.entity.TTravelUser;
 import com.lemon.entity.TTravelUser;
 import com.lemon.service.TTravelUserService;
 import com.lemon.service.TTravelUserService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -35,6 +41,7 @@ public class TTravelUserController {
     @Autowired
     private TTravelUserService tTravelUserService;
 
+
     /**
      * 查询全部用户信息
      * @return
@@ -46,6 +53,22 @@ public class TTravelUserController {
         return R.success("查询全部用户信息成功！",list);
     }
 
+    /**
+     * 查询全部用户信息
+     * @return
+     */
+    @ApiOperation(value = "Login",notes = "登陆")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username",value = "用户账号"),
+            @ApiImplicitParam(name = "password",value = "用户密码")
+    })
+    @RequestMapping(value = "/login",produces = { "text/html;charset=UTF-8;", "application/json;charset=UTF-8;" })
+    public String Login(String username,String password ){
+        System.out.println(username);
+        TTravelUser tTravelUser = tTravelUserService.login(username,DigestUtils.md5DigestAsHex(password.getBytes()));
+        String json = JSON.toJSONString(tTravelUser);
+        return json;
+    }
     /**
      * 分页查询全部用户信息（可带条件 账号、性别、账号状态）
      * @param query

@@ -1,5 +1,7 @@
 package com.lemon.controller;
 
+import java.util.List;
+
 /**
  * @ClassName Test
  * @Description
@@ -9,8 +11,13 @@ package com.lemon.controller;
  **/
 public class Test {
     public static void main(String[] args) {
-
-        System.out.println("5"+2);
+//        TTravelUserController tTravelUserController = new TTravelUserController();
+//        String username = "user";
+//        String password = "123456";
+//        List json = tTravelUserController.Login(username,password);
+//        System.out.println(json);
     }
+
+
 
 }

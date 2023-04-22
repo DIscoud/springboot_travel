@@ -21,4 +21,7 @@
         user_uid, user_username, user_password, user_ID, user_sex, user_img, user_status, user_phone, user_name, rut_time
     </sql>
 
+    <select id="login" resultType="com.lemon.entity.TTravelUser">
+        select * from T_TRAVEL_USER where user_username = #{username} and user_password = #{userpwd}
+    </select>
 </mapper>
