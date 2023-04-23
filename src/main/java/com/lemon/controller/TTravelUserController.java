@@ -83,12 +83,14 @@ public class TTravelUserController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "useracc",value = "用户账号"),
             @ApiImplicitParam(name = "password",value = "用户密码"),
-            @ApiImplicitParam(name = "username",value = "用户账号")
+            @ApiImplicitParam(name = "username",value = "用户名称")
     })
     @RequestMapping(value = "/register",produces = { "text/html;charset=UTF-8;", "application/json;charset=UTF-8;" })
     public int register(String username,String password,String useracc){
+        System.out.println(useracc+","+password+","+useracc);
         int num = tTravelUserService.register(username,DigestUtils.md5DigestAsHex(password.getBytes()),useracc);
-        return num;
+        System.out.println(num);
+        return 1;
     }
 
 

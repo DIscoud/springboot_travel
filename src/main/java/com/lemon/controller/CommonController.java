@@ -3,10 +3,7 @@ package com.lemon.controller;
 import com.lemon.common.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletOutputStream;
@@ -38,7 +35,7 @@ public class CommonController {
      * @return
      */
     @PostMapping("/upload")
-    public R<String> upload(MultipartFile file){
+    public R<String> upload(@RequestBody MultipartFile file){
         //file是一个临时文件，需要转存到指定位置，否则本次请求完成后临时文件会删除
         //原始文件名
         String originalFilename = file.getOriginalFilename();
@@ -74,7 +71,7 @@ public class CommonController {
             FileInputStream fileInputStream = new FileInputStream(new File(basePath + name));
             //输出流，通过输出流将文件写回浏览器，在浏览器显示照片
             ServletOutputStream outputStream = response.getOutputStream();
-            response.setContentType("image/jpeg");
+            response.setContentType("images/png");
             int len = 0;
             byte[] bytes = new byte[1024];
 
