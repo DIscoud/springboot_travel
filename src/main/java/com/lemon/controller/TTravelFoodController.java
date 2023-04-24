@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 
@@ -88,6 +89,7 @@ public class TTravelFoodController {
      */
     @PostMapping("/save")
     public Result save(@RequestBody TTravelFood tTravelFood){
+        tTravelFood.setRutTime(LocalDateTime.now());
         return tTravelFoodService.save(tTravelFood) ? Result.success("新增成功！") : Result.fail();
     }
 
