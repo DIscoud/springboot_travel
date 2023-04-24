@@ -90,6 +90,7 @@ public class TTravelFoodController {
     @PostMapping("/save")
     public Result save(@RequestBody TTravelFood tTravelFood){
         tTravelFood.setRutTime(LocalDateTime.now());
+
         return tTravelFoodService.save(tTravelFood) ? Result.success("新增成功！") : Result.fail();
     }
 
